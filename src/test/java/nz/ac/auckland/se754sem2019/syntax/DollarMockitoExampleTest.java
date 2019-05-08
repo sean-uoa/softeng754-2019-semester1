@@ -59,4 +59,14 @@ public class DollarMockitoExampleTest {
 		// Then
 		assertEquals(new Dollar(10), result);
 	}
+	
+	@Test(expected = Exception.class)
+	public void shouldCaptureTheExceptionWhenAMethodConfiguredToThrowIt() {
+		// Given
+		Dollar mockedFive = Mockito.mock(Dollar.class);
+		Mockito.doThrow(new Exception("blabla...")).when(mockedFive).times(2);
+		
+		// When
+		mockedFive.times(2);
+	}
 }
