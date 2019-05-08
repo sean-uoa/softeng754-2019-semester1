@@ -1,4 +1,4 @@
-package nz.ac.auckland.se754sem2018.syntax;
+package nz.ac.auckland.se754sem2019.syntax;
 
 import org.junit.After;
 import org.junit.AfterClass;
