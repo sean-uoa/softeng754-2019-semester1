@@ -5,7 +5,7 @@ public class Dollar {
 	int amount;
 	
 	public Dollar(int amount) {
-		this.amount = 10;
+		this.amount = 5*2;
 	}
 	
 	public void times(int multiplier) {
