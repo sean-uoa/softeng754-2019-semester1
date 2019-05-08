@@ -33,4 +33,30 @@ public class DollarMockitoExampleTest {
 		// Then
 		assertEquals(new Dollar(10), result);
 	}
+	
+	@Test
+	public void shouldBehaveAsSpecifiedWhenAMethodHasBeenModifiedWithSyntax1() {
+		// Given
+		Dollar mockedFive = Mockito.mock(Dollar.class);
+		Mockito.doReturn(new Dollar(10)).when(mockedFive).times(2);
+		
+		// When
+		Dollar result = mockedFive.times(2);
+		
+		// Then
+		assertEquals(new Dollar(10), result);
+	}
+	
+	@Test
+	public void shouldBehaveAsSpecifiedWhenAMethodHasBeenModifiedWithSyntax2() {
+		// Given
+		Dollar mockedFive = Mockito.mock(Dollar.class);
+		Mockito.when(mockedFive.times(2)).thenReturn(new Dollar(10));
+		
+		// When
+		Dollar result = mockedFive.times(2);
+		
+		// Then
+		assertEquals(new Dollar(10), result);
+	}
 }
