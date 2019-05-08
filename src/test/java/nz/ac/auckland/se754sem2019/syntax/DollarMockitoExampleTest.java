@@ -21,4 +21,16 @@ public class DollarMockitoExampleTest {
 		// Then
 		assertNull(result);
 	}
+	
+	@Test
+	public void shouldBehaveTheSameWhenInvokeAUnmodifiedMethodOfASpyObject() {
+		// Given
+		Dollar spiedFive = Mockito.spy(new Dollar(5));
+		
+		// When
+		Dollar result = spiedFive.times(2);
+		
+		// Then
+		assertEquals(new Dollar(10), result);
+	}
 }
