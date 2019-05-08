@@ -35,4 +35,11 @@ public class DollarDivisionTest {
 		// When
 		ten.dividedBy(-2);
 	}
+	
+	@Test(timeout=2000)
+	public void testDivisionTimeout() {
+		for( ; ; ) {
+
+		}
+	}
 }
