@@ -26,8 +26,13 @@ public class Dollar {
 		return false;
 	}
 	
-	public Dollar dividedBy(int denominator) {
+	public Dollar dividedBy(int denominator) throws NegativeNumberException{
+		if (denominator < 0) {
+			throw new NegativeNumberException();
+		}
 		this.amount /= denominator;
 		return this;
 	}
+	
+	
 }
