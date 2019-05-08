@@ -2,6 +2,7 @@ package nz.ac.auckland.se754sem2019.mycash;
 
 import static org.junit.Assert.assertEquals;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 public class DollarDivisionTest {
@@ -36,6 +37,7 @@ public class DollarDivisionTest {
 		ten.dividedBy(-2);
 	}
 	
+	@Ignore
 	@Test(timeout=2000)
 	public void testDivisionTimeout() {
 		for( ; ; ) {
