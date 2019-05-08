@@ -26,4 +26,13 @@ public class DollarDivisionTest {
 		// When
 		ten.dividedBy(0);
 	}
+	
+	@Test
+	public void shouldThrowExceptinWhenDividedByMinusTwo() {
+		// Given
+		Dollar ten = new Dollar(10);
+		
+		// When
+		ten.dividedBy(-2);
+	}
 }
