@@ -8,8 +8,13 @@ public class Dollar {
 		this.amount = amount;
 	}
 	
-	public int times(int multiplier) {
+	public Dollar times(int multiplier) {
 		this.amount *= multiplier;
-		return this.amount;
+		return this;
+	}
+	
+	@Override
+	public String toString() {
+		return "$"+this.amount;
 	}
 }
