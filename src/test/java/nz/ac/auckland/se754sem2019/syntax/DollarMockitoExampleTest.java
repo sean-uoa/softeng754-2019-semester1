@@ -69,4 +69,16 @@ public class DollarMockitoExampleTest {
 		// When
 		mockedFive.times(2);
 	}
+	
+	@Test
+	public void shouldBeExecutedOnceWhenInvokeAMethodOfAMockObject() {
+		// Given
+		Dollar mockedFive = Mockito.mock(Dollar.class);
+		
+		// When
+		mockedFive.times(2);
+		
+		// Then
+		Mockito.verify(mockedFive, Mockito.times(1)).times(2);
+	}
 }
