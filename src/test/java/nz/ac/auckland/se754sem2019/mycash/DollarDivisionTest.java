@@ -18,7 +18,7 @@ public class DollarDivisionTest {
 		assertEquals(new Dollar(5), result);
 	}
 	
-	@Test
+	@Test(expected=ArithmeticException.class)
 	public void testDollarDividedByZero() {
 		// Given
 		Dollar ten = new Dollar(10);
