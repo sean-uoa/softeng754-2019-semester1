@@ -27,7 +27,7 @@ public class DollarDivisionTest {
 		ten.dividedBy(0);
 	}
 	
-	@Test
+	@Test(expected = NegativeNumberException.class)
 	public void shouldThrowExceptinWhenDividedByMinusTwo() {
 		// Given
 		Dollar ten = new Dollar(10);
