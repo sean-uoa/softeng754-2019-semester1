@@ -25,4 +25,9 @@ public class Dollar {
 		}
 		return false;
 	}
+	
+	public Dollar dividedBy(int denominator) {
+		this.amount /= denominator;
+		return this;
+	}
 }
