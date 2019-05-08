@@ -1,7 +1,11 @@
 language: java
 jdk: oraclejdk8
+<<<<<<< master
+services: mongodb
+=======
 
 script: "mvn cobertura:cobertura"
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
+>>>>>>> 9800932 Return to the initial status
