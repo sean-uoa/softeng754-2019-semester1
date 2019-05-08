@@ -12,9 +12,9 @@ public class DollarMultiplicationTest {
 		Dollar five = new Dollar(5);
 		
 		// Actions
-		int result = five.times(2);
+		Dollar result = five.times(2);
 		
 		// Postconditions
-		assertEquals(10, result);
+		assertEquals(new Dollar(10), result);
 	}
 }
