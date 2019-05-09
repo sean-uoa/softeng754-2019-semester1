@@ -42,6 +42,11 @@ public class Dollar {
 	public boolean isCalculatorNull() {
 		return this.calculator == null;
 	}
+
+	public Dollar timesWithCalculator(int multiplier) {
+		
+		return null;
+	}
 	
 	
 }
