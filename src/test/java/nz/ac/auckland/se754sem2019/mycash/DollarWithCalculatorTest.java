@@ -49,7 +49,7 @@ public class DollarWithCalculatorTest {
 		five.timesWithCalculator(2);
 		
 		// Then
-		Mockito.verify(calculator, Mockito.times(2)).multiply(5, 2);
+		Mockito.verify(calculator, Mockito.times(1)).multiply(5, 2);
 	}
 	
 }
