@@ -3,20 +3,26 @@ package nz.ac.auckland.se754sem2019.mycash;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 
+import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mockito;
 
 public class DollarWithCalculatorTest {
 
+	Dollar five;
+	ICalculator calculator;
+	
+	@Before
+	public void setUp() {
+		//Given
+		five = new Dollar(5);
+		calculator = Mockito.mock(ICalculator.class);
+		five.setCalculator(calculator);
+	}
+	
 	@Test
 	public void shouldHaveNoNullCalculatorWhenSetCalculatorSuccessfully() {
-		// Given
-		Dollar five = new Dollar(5);
-		ICalculator calculator = Mockito.mock(ICalculator.class);
 		
-		// When
-		five.setCalculator(calculator);
-				
 		// Then
 		assertFalse(five.isCalculatorNull());
 	}
@@ -25,10 +31,6 @@ public class DollarWithCalculatorTest {
 	public void shouldReturnTenWhenFiveDollarIsMultipliedByTwo() {
 		
 		// Given
-		Dollar five = new Dollar(5);
-		ICalculator calculator = Mockito.mock(ICalculator.class);
-		five.setCalculator(calculator);
-		
 		Mockito.doReturn(10).when(calculator).multiply(5, 2);
 		
 		// When
@@ -37,4 +39,5 @@ public class DollarWithCalculatorTest {
 		// Then
 		assertEquals(new Dollar(10), result);
 	}
+	
 }
