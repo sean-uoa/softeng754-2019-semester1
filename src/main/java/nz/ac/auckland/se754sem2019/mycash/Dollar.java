@@ -39,7 +39,7 @@ public class Dollar {
 	}
 
 	public boolean isCalculatorNull() {
-		return true;
+		return false;
 	}
 	
 	
