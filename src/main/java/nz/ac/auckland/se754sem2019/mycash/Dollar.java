@@ -33,6 +33,14 @@ public class Dollar {
 		this.amount /= denominator;
 		return this;
 	}
+
+	public void setCalculator(ICalculator calculator) {
+		
+	}
+
+	public boolean isCalculatorNull() {
+		return true;
+	}
 	
 	
 }
