@@ -10,7 +10,7 @@ import nz.ac.auckland.se754sem2019.mycash.Dollar;
 import nz.ac.auckland.se754sem2019.mycash.ICalculator;
 import nz.ac.auckland.se754sem2019.mycash.NegativeNumberException;
 
-public class DollarWithWebServiceCalculatorTest {
+public class DollarWithWebServiceCalculatorIntegrationTest {
 
 	Dollar five;
 	ICalculator calculator;
