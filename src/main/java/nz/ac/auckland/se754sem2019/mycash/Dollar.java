@@ -3,6 +3,7 @@ package nz.ac.auckland.se754sem2019.mycash;
 public class Dollar {
 
 	private int amount;
+	private ICalculator calculator;
 	
 	public Dollar(int amount) {
 		this.amount = amount;
@@ -35,11 +36,11 @@ public class Dollar {
 	}
 
 	public void setCalculator(ICalculator calculator) {
-		
+		this.calculator = calculator;
 	}
 
 	public boolean isCalculatorNull() {
-		return false;
+		return this.calculator == null;
 	}
 	
 	
