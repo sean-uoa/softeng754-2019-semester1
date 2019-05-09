@@ -45,7 +45,8 @@ public class Dollar {
 
 	public Dollar timesWithCalculator(int multiplier) {
 		
-		return null;
+		int resultantAmount = this.calculator.multiply(this.amount, multiplier);
+		return new Dollar(resultantAmount);
 	}
 	
 	
