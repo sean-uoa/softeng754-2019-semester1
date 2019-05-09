@@ -40,4 +40,16 @@ public class DollarWithCalculatorTest {
 		assertEquals(new Dollar(10), result);
 	}
 	
+	@Test
+	public void shouldCallICalculatorMultiplyMethodOnceWhenInvokingTimesWithCalculator() {
+		// Given
+		Mockito.doReturn(10).when(calculator).multiply(5, 2);
+		
+		// When
+		five.timesWithCalculator(2);
+		
+		// Then
+		Mockito.verify(calculator, Mockito.times(2)).multiply(5, 2);
+	}
+	
 }
